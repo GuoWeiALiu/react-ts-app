@@ -21,6 +21,17 @@ module.exports = {
   ],
   rules: {
     'no-use-before-define': 'off',
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }],
+    'import/extensions': [1, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }]
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        paths: ['./src']
+      }
+    }
   },
 };
