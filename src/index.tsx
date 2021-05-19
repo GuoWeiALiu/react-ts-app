@@ -1,9 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { App } from './modules/core/components/App';
+import Root from './Root';
+import configureStore from './configureStore';
+
+const store = configureStore();
 
 ReactDOM.render(
-  <App />,
+  <Root store={store} />,
   document.querySelector('#root'),
 );
